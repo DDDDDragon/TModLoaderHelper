@@ -1,0 +1,15 @@
+{
+    "添加配方": {
+        "prefix": "AddRecipes",
+        "body": [
+            "public override void AddRecipes()",
+            "{",
+            "\tModRecipe recipe = new ModRecipe(mod);",
+            "\trecipe.AddIngredient(${1:ItemID.DirtBlock}, 1);",
+            "\trecipe.SetResult(this);",
+            "\trecipe.AddRecipe();",
+            "}"
+        ],
+        "description": "添加配方"
+    }
+}
