@@ -10,6 +10,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "image/tModLoader.ico",
   "activationEvents": [
     "onCommand:tmodloaderuimaker.helloWorld",
     "onCommand:tmodloaderuimaker.start",
