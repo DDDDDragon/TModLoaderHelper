@@ -4,7 +4,7 @@ import * as path from 'path';
 
 export class TMLUIEditor implements vscode.CustomTextEditorProvider
 {
-	private static readonly viewType = 'tmodloaderuimaker.ui';
+	private static readonly viewType = 'tmodloaderhelper.ui';
 
 	constructor(
 		private readonly context: vscode.ExtensionContext
@@ -47,10 +47,6 @@ export class TMLUIEditor implements vscode.CustomTextEditorProvider
 			updateWebview();
 	}
     private getHtmlForWebview(webview: vscode.Webview): string{
-        let d = "adadad"
-        fs.readFile('D:/TModLoaderUIMaker/tmodloaderuimaker/webview.html', 'utf8', function(err, data){
-            d = data;
-        });
         return `
         <html lang="en">
     <head>
