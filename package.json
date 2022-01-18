@@ -1,6 +1,6 @@
 {
-  "name": "tmodloader-ui-maker",
-  "displayName": "TModLoader可视化UI制作器",
+  "name": "tmodloader-helper",
+  "displayName": "TModLoader助手",
   "description": "TModLoader",
   "version": "0.0.1",
   "publisher": "Mantodea",
@@ -10,11 +10,15 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/DDDDDragon/TModLoaderHelper"
+	},
   "icon": "image/tModLoader.ico",
   "activationEvents": [
-    "onCommand:tmodloaderuimaker.helloWorld",
-    "onCommand:tmodloaderuimaker.start",
-    "onCustomEditor:tmodloaderuimaker.ui"
+    "onCommand:tmodloaderhelper.helloWorld",
+    "onCommand:tmodloaderhelper.start",
+    "onCustomEditor:tmodloaderhelper.ui"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -30,7 +34,7 @@
 	  ],
     "customEditors": [
       {
-        "viewType": "tmodloaderuimaker.ui",
+        "viewType": "tmodloaderhelper.ui",
         "displayName": "可视化UI设计",
         "selector": [
           {
@@ -41,11 +45,11 @@
     ],
     "commands": [
       {
-        "command": "tmodloaderuimaker.helloWorld",
+        "command": "tmodloaderhelper.helloWorld",
         "title": "Hello World"
       },
       {
-        "command": "tmodloaderuimaker.start",
+        "command": "tmodloaderhelper.start",
         "title": "Start"
       }
     ]
