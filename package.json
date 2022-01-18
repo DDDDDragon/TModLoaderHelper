@@ -18,7 +18,8 @@
   "activationEvents": [
     "onCommand:tmodloaderhelper.helloWorld",
     "onCommand:tmodloaderhelper.start",
-    "onCustomEditor:tmodloaderhelper.ui"
+    "onCustomEditor:tmodloaderhelper.ui",
+    "onLanguage:csharp"
   ],
   "main": "./out/extension.js",
   "contributes": {
