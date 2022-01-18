@@ -10,10 +10,7 @@ export function pushHover(hoverText: string, hoverTarget: string, context: vscod
         {
             const doc = document;
             const fileName    = document.fileName;
-            const workDir     = path.dirname(fileName);
             const word        = document.getText(document.getWordRangeAtPosition(position));
-            
-            const text = doc.getText();
             if(new RegExp(`^${hoverTarget}`).test(word))
             {
                 return new vscode.Hover(hoverText);
