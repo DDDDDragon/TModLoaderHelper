@@ -32,7 +32,6 @@ export function activate(context: vscode.ExtensionContext) {
 	//hover.activate(context);
 }
 function GetStringFromDic(hoverTarget: string): string {
-    // 长度必大于0
 	let dic = dictronary.NamesData;
 	return dic[hoverTarget];
 }
