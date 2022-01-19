@@ -2,7 +2,7 @@
   "name": "tmodloader-helper",
   "displayName": "TModLoader助手",
   "description": "TModLoader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "Mantodea",
   "engines": {
     "vscode": "^1.63.0"
