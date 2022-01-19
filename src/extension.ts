@@ -3,6 +3,8 @@
 import * as vscode from 'vscode';
 import { TMLUIEditor } from './ui';
 import * as hover from './hover';
+import { strArr } from './data';
+import * as dictronary from './LoadItemNames'
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -18,11 +20,21 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from TModLoaderHelper!');
 	});
-
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(TMLUIEditor.register(context));
-	hover.activate(context);
+	  // 注册hover提供器
+	context.subscriptions.push(vscode.languages.registerHoverProvider("csharp", {provideHover: (doc: vscode.TextDocument, pos: vscode.Position) => {
+			const word = doc.getText(doc.getWordRangeAtPosition(pos));
+			let hoverText = GetStringFromDic(word);
+			return new vscode.Hover(hoverText);
+		}
+	}))
+	//hover.activate(context);
 }
-
+function GetStringFromDic(hoverTarget: string): string {
+    // 长度必大于0
+	let dic = dictronary.NamesData;
+	return dic[hoverTarget];
+}
 // this method is called when your extension is deactivated
 export function deactivate() {}
