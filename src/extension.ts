@@ -18,7 +18,6 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('tmodloaderhelper.helloWorld', () => {
 		vscode.window.showInformationMessage('Hello World from TModLoaderHelper!');
 	});
-	init.downloadNET();
 	//let dd = vscode.commands.registerCommand('tmodloaderhelper.1·3=>1·4', () => {
 	//	changeVersion.ChangeVersion();
 	//});
